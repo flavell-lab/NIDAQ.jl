@@ -8483,35 +8483,35 @@ function DAQmxResetChanSyncUnlockBehavior(taskHandle, channel)
 end
 
 function DAQmxGetDevIsSimulated(device, data)
-    @threadcall((:DAQmxGetDevIsSimulated, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
+    ccall((:DAQmxGetDevIsSimulated, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
 end
 
 function DAQmxGetDevProductCategory(device, data)
-    @threadcall((:DAQmxGetDevProductCategory, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
+    ccall((:DAQmxGetDevProductCategory, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
 end
 
 function DAQmxGetDevProductType(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevProductType, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevProductType, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevProductNum(device, data)
-    @threadcall((:DAQmxGetDevProductNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevProductNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevSerialNum(device, data)
-    @threadcall((:DAQmxGetDevSerialNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevSerialNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevAccessoryProductTypes(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevAccessoryProductTypes, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevAccessoryProductTypes, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevAccessoryProductNums(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAccessoryProductNums, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAccessoryProductNums, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAccessorySerialNums(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAccessorySerialNums, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAccessorySerialNums, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetCarrierSerialNum(device, data)
@@ -8527,335 +8527,335 @@ function DAQmxGetFieldDAQBankDevNames(device, data, bufferSize)
 end
 
 function DAQmxGetDevChassisModuleDevNames(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevChassisModuleDevNames, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevChassisModuleDevNames, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevAnlgTrigSupported(device, data)
-    @threadcall((:DAQmxGetDevAnlgTrigSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
+    ccall((:DAQmxGetDevAnlgTrigSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
 end
 
 function DAQmxGetDevDigTrigSupported(device, data)
-    @threadcall((:DAQmxGetDevDigTrigSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
+    ccall((:DAQmxGetDevDigTrigSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
 end
 
 function DAQmxGetDevTimeTrigSupported(device, data)
-    @threadcall((:DAQmxGetDevTimeTrigSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
+    ccall((:DAQmxGetDevTimeTrigSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
 end
 
 function DAQmxGetDevAIPhysicalChans(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevAIPhysicalChans, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevAIPhysicalChans, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevAISupportedMeasTypes(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAISupportedMeasTypes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAISupportedMeasTypes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAIMaxSingleChanRate(device, data)
-    @threadcall((:DAQmxGetDevAIMaxSingleChanRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
+    ccall((:DAQmxGetDevAIMaxSingleChanRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
 end
 
 function DAQmxGetDevAIMaxMultiChanRate(device, data)
-    @threadcall((:DAQmxGetDevAIMaxMultiChanRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
+    ccall((:DAQmxGetDevAIMaxMultiChanRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
 end
 
 function DAQmxGetDevAIMinRate(device, data)
-    @threadcall((:DAQmxGetDevAIMinRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
+    ccall((:DAQmxGetDevAIMinRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
 end
 
 function DAQmxGetDevAISimultaneousSamplingSupported(device, data)
-    @threadcall((:DAQmxGetDevAISimultaneousSamplingSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
+    ccall((:DAQmxGetDevAISimultaneousSamplingSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
 end
 
 function DAQmxGetDevAINumSampTimingEngines(device, data)
-    @threadcall((:DAQmxGetDevAINumSampTimingEngines, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevAINumSampTimingEngines, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevAISampModes(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAISampModes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAISampModes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAINumSyncPulseSrcs(device, data)
-    @threadcall((:DAQmxGetDevAINumSyncPulseSrcs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevAINumSyncPulseSrcs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevAITrigUsage(device, data)
-    @threadcall((:DAQmxGetDevAITrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
+    ccall((:DAQmxGetDevAITrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
 end
 
 function DAQmxGetDevAIVoltageRngs(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAIVoltageRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAIVoltageRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAIVoltageIntExcitDiscreteVals(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAIVoltageIntExcitDiscreteVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAIVoltageIntExcitDiscreteVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAIVoltageIntExcitRangeVals(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAIVoltageIntExcitRangeVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAIVoltageIntExcitRangeVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAIChargeRngs(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAIChargeRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAIChargeRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAICurrentRngs(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAICurrentRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAICurrentRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAICurrentIntExcitDiscreteVals(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAICurrentIntExcitDiscreteVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAICurrentIntExcitDiscreteVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAIBridgeRngs(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAIBridgeRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAIBridgeRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAIResistanceRngs(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAIResistanceRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAIResistanceRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAIFreqRngs(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAIFreqRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAIFreqRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAIGains(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAIGains, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAIGains, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAICouplings(device, data)
-    @threadcall((:DAQmxGetDevAICouplings, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
+    ccall((:DAQmxGetDevAICouplings, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
 end
 
 function DAQmxGetDevAILowpassCutoffFreqDiscreteVals(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAILowpassCutoffFreqDiscreteVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAILowpassCutoffFreqDiscreteVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAILowpassCutoffFreqRangeVals(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAILowpassCutoffFreqRangeVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAILowpassCutoffFreqRangeVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetAIDigFltrTypes(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetAIDigFltrTypes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetAIDigFltrTypes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAIDigFltrLowpassCutoffFreqDiscreteVals(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAIDigFltrLowpassCutoffFreqDiscreteVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAIDigFltrLowpassCutoffFreqDiscreteVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAIDigFltrLowpassCutoffFreqRangeVals(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAIDigFltrLowpassCutoffFreqRangeVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAIDigFltrLowpassCutoffFreqRangeVals, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAOPhysicalChans(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevAOPhysicalChans, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevAOPhysicalChans, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevAOSupportedOutputTypes(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAOSupportedOutputTypes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAOSupportedOutputTypes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAOMaxRate(device, data)
-    @threadcall((:DAQmxGetDevAOMaxRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
+    ccall((:DAQmxGetDevAOMaxRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
 end
 
 function DAQmxGetDevAOMinRate(device, data)
-    @threadcall((:DAQmxGetDevAOMinRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
+    ccall((:DAQmxGetDevAOMinRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
 end
 
 function DAQmxGetDevAOSampClkSupported(device, data)
-    @threadcall((:DAQmxGetDevAOSampClkSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
+    ccall((:DAQmxGetDevAOSampClkSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
 end
 
 function DAQmxGetDevAONumSampTimingEngines(device, data)
-    @threadcall((:DAQmxGetDevAONumSampTimingEngines, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevAONumSampTimingEngines, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevAOSampModes(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAOSampModes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAOSampModes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAONumSyncPulseSrcs(device, data)
-    @threadcall((:DAQmxGetDevAONumSyncPulseSrcs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevAONumSyncPulseSrcs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevAOTrigUsage(device, data)
-    @threadcall((:DAQmxGetDevAOTrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
+    ccall((:DAQmxGetDevAOTrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
 end
 
 function DAQmxGetDevAOVoltageRngs(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAOVoltageRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAOVoltageRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAOCurrentRngs(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAOCurrentRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAOCurrentRngs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevAOGains(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevAOGains, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevAOGains, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevDILines(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevDILines, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevDILines, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevDIPorts(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevDIPorts, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevDIPorts, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevDIMaxRate(device, data)
-    @threadcall((:DAQmxGetDevDIMaxRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
+    ccall((:DAQmxGetDevDIMaxRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
 end
 
 function DAQmxGetDevDINumSampTimingEngines(device, data)
-    @threadcall((:DAQmxGetDevDINumSampTimingEngines, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevDINumSampTimingEngines, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevDITrigUsage(device, data)
-    @threadcall((:DAQmxGetDevDITrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
+    ccall((:DAQmxGetDevDITrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
 end
 
 function DAQmxGetDevDOLines(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevDOLines, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevDOLines, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevDOPorts(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevDOPorts, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevDOPorts, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevDOMaxRate(device, data)
-    @threadcall((:DAQmxGetDevDOMaxRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
+    ccall((:DAQmxGetDevDOMaxRate, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
 end
 
 function DAQmxGetDevDONumSampTimingEngines(device, data)
-    @threadcall((:DAQmxGetDevDONumSampTimingEngines, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevDONumSampTimingEngines, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevDOTrigUsage(device, data)
-    @threadcall((:DAQmxGetDevDOTrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
+    ccall((:DAQmxGetDevDOTrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
 end
 
 function DAQmxGetDevCIPhysicalChans(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevCIPhysicalChans, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevCIPhysicalChans, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevCISupportedMeasTypes(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevCISupportedMeasTypes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevCISupportedMeasTypes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevCITrigUsage(device, data)
-    @threadcall((:DAQmxGetDevCITrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
+    ccall((:DAQmxGetDevCITrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
 end
 
 function DAQmxGetDevCISampClkSupported(device, data)
-    @threadcall((:DAQmxGetDevCISampClkSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
+    ccall((:DAQmxGetDevCISampClkSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
 end
 
 function DAQmxGetDevCISampModes(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevCISampModes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevCISampModes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevCIMaxSize(device, data)
-    @threadcall((:DAQmxGetDevCIMaxSize, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevCIMaxSize, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevCIMaxTimebase(device, data)
-    @threadcall((:DAQmxGetDevCIMaxTimebase, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
+    ccall((:DAQmxGetDevCIMaxTimebase, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
 end
 
 function DAQmxGetDevCOPhysicalChans(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevCOPhysicalChans, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevCOPhysicalChans, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevCOSupportedOutputTypes(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevCOSupportedOutputTypes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevCOSupportedOutputTypes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevCOSampClkSupported(device, data)
-    @threadcall((:DAQmxGetDevCOSampClkSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
+    ccall((:DAQmxGetDevCOSampClkSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
 end
 
 function DAQmxGetDevCOSampModes(device, data, arraySizeInElements)
-    @threadcall((:DAQmxGetDevCOSampModes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
+    ccall((:DAQmxGetDevCOSampModes, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}, uInt32), device, data, arraySizeInElements)
 end
 
 function DAQmxGetDevCOTrigUsage(device, data)
-    @threadcall((:DAQmxGetDevCOTrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
+    ccall((:DAQmxGetDevCOTrigUsage, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
 end
 
 function DAQmxGetDevCOMaxSize(device, data)
-    @threadcall((:DAQmxGetDevCOMaxSize, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevCOMaxSize, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevCOMaxTimebase(device, data)
-    @threadcall((:DAQmxGetDevCOMaxTimebase, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
+    ccall((:DAQmxGetDevCOMaxTimebase, NIDAQmx), int32, (Ptr{UInt8}, Ptr{float64}), device, data)
 end
 
 function DAQmxGetDevTEDSHWTEDSSupported(device, data)
-    @threadcall((:DAQmxGetDevTEDSHWTEDSSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
+    ccall((:DAQmxGetDevTEDSHWTEDSSupported, NIDAQmx), int32, (Ptr{UInt8}, Ptr{bool32}), device, data)
 end
 
 function DAQmxGetDevNumDMAChans(device, data)
-    @threadcall((:DAQmxGetDevNumDMAChans, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevNumDMAChans, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevBusType(device, data)
-    @threadcall((:DAQmxGetDevBusType, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
+    ccall((:DAQmxGetDevBusType, NIDAQmx), int32, (Ptr{UInt8}, Ptr{int32}), device, data)
 end
 
 function DAQmxGetDevPCIBusNum(device, data)
-    @threadcall((:DAQmxGetDevPCIBusNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevPCIBusNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevPCIDevNum(device, data)
-    @threadcall((:DAQmxGetDevPCIDevNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevPCIDevNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevPXIChassisNum(device, data)
-    @threadcall((:DAQmxGetDevPXIChassisNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevPXIChassisNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevPXISlotNum(device, data)
-    @threadcall((:DAQmxGetDevPXISlotNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevPXISlotNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevCompactDAQChassisDevName(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevCompactDAQChassisDevName, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevCompactDAQChassisDevName, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevCompactDAQSlotNum(device, data)
-    @threadcall((:DAQmxGetDevCompactDAQSlotNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevCompactDAQSlotNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevCompactRIOChassisDevName(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevCompactRIOChassisDevName, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevCompactRIOChassisDevName, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevCompactRIOSlotNum(device, data)
-    @threadcall((:DAQmxGetDevCompactRIOSlotNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevCompactRIOSlotNum, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevTCPIPHostname(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevTCPIPHostname, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevTCPIPHostname, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevTCPIPEthernetIP(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevTCPIPEthernetIP, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevTCPIPEthernetIP, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevTCPIPWirelessIP(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevTCPIPWirelessIP, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevTCPIPWirelessIP, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevTerminals(device, data, bufferSize)
-    @threadcall((:DAQmxGetDevTerminals, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
+    ccall((:DAQmxGetDevTerminals, NIDAQmx), int32, (Ptr{UInt8}, SafeCstring, uInt32), device, data, bufferSize)
 end
 
 function DAQmxGetDevNumTimeTrigs(device, data)
-    @threadcall((:DAQmxGetDevNumTimeTrigs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevNumTimeTrigs, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetDevNumTimestampEngines(device, data)
-    @threadcall((:DAQmxGetDevNumTimestampEngines, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
+    ccall((:DAQmxGetDevNumTimestampEngines, NIDAQmx), int32, (Ptr{UInt8}, Ptr{uInt32}), device, data)
 end
 
 function DAQmxGetExportedAIConvClkOutputTerm(taskHandle, data, bufferSize)
@@ -10335,7 +10335,7 @@ function DAQmxGetSysTasks(data, bufferSize)
 end
 
 function DAQmxGetSysDevNames(data, bufferSize)
-    @threadcall((:DAQmxGetSysDevNames, NIDAQmx), int32, (SafeCstring, uInt32), data, bufferSize)
+    ccall((:DAQmxGetSysDevNames, NIDAQmx), int32, (SafeCstring, uInt32), data, bufferSize)
 end
 
 function DAQmxGetSysNIDAQMajorVersion(data)
